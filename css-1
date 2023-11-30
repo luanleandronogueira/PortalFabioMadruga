@@ -1,0 +1,14 @@
+﻿@font-face {
+  font-family: 'Hind Vadodara';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(s/hindvadodara/v12/neINzCKvrIcn5pbuuuriV9tTQJLVqQ.ttf) format('truetype');
+}
+@font-face {
+  font-family: 'Hind Vadodara';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url(s/hindvadodara/v12/neIQzCKvrIcn5pbuuuriV9tTSGH2uXQ-pQ.ttf) format('truetype');
+}

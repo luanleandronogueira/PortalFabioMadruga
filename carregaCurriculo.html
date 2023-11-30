@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <!-- Meta tags Obrigatórias -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title></title>
+  </head>
+  <body>
+  	<div class="row">
+	  <div class="col-md-2">
+        <div class="col-md-12">
+         <div>foto</div>
+          <div>
+			Contatos
+			<section class="contact">
+                <h6>Contatos</h6>
+                  <ul>
+                    <li>
+                      <i class="fa fa-map-marker-alt"></i><asp:Label ID="lblEndereco" runat="server" Text="Label"></asp:Label></li><br>
+                    <li>
+                      <i class="fa fa-phone"></i><asp:Label ID="lblCelWhatsapp" runat="server" Text="Label"></asp:Label> 
+                    </li>                    
+                    <li>
+                      <i class="fab fa-instagram"></i><asp:Label ID="lblInstagram" runat="server" Text="Label"></asp:Label>
+                     </li><section></section> 
+                  </ul>
+             </section>
+          </div>
+         </div>
+      </div>
+     <div class="col-md-10">
+     	<section class="references">
+           <a href="#"></a>
+       </section>
+       <section>
+	    <header class="name">
+	      <h6 id="txtNome">
+	        <span><asp:Label ID="lblNome" runat="server" Text="Label"></asp:Label></span>
+	      </h6>
+        <section>
+           <li class="mb-1 ml-1"><span>Data de Nascimento: </span><asp:Label ID="lblDatNasc" runat="server" Text="Label"></asp:Label></li>
+	       <li class="mb-1 ml-1"><span>Gênero: </span><asp:Label ID="lblGenero" runat="server" Text="Label"></asp:Label></li>
+	       <li class="mb-1 ml-1"><span>Estado Civil: </span><asp:Label ID="lblGenEstCivil" runat="server" Text="Label"></asp:Label></li>
+	       <li class="mb-1 ml-1"><span>Carteira de Habilitação: </span><asp:Label ID="lblCartHabili" runat="server" Text="Label"></asp:Label></li>
+	       <li class="mb-1 ml-1"><span>CPF: </span><asp:Label ID="lblCPF" runat="server" Text="Label"></asp:Label></li>
+           <li class="mb-1 ml-1"><i class="fa fa-envelope"></i><asp:Label ID="lblEmail" runat="server" Text="Label"></asp:Label></li>
+         </section>
+        </header>
+         <section>
+         <section class="summary"><br><br>
+           <h6>Conhecimentos Seculares:</h6><hr>
+             <li  class="mb-1 ml-1"><span>Formação Acadêmica: </span><asp:Label ID="lblFormacao" runat="server" Text="Label"></asp:Label></li>
+             <li  class="mb-1 ml-1"><span>Inglês: </span><asp:Label ID="lblIngles" runat="server" Text="Label"></asp:Label></li>
+             <li  class="mb-1 ml-1"><span>Espanhol: </span><asp:Label ID="lblEspanhol" runat="server" Text="Label"></asp:Label></li>
+             <li  class="mb-1 ml-1"><span>Informática: </span><asp:Label ID="lblInformatica" runat="server" Text="Label"></asp:Label></li>
+        </section>
+        <section class="experience"><br>
+          <h6  class="mb-1 ml-1">Experiências Profissionais:</h6><hr>
+            <asp:Label ID="lblExperiencia" runat="server" Visible="false" Text="Label"></asp:Label>
+			<textarea rows="2" cols="3" id="txtExperienciasProfissionais" runat="server" placeholder="Descreva suas experiências profissinais" class="form-control mb-1 ml-1" style="border-style: none; border-color: #FFFFFF; height:200px; width:100%;" name="S1"></textarea>
+		</section>
+		<section class="experience">
+		  <h6  class="mb-1 ml-1">Cursos Relevantes:</h6><hr>
+            <asp:Label  class="mb-1 ml-1" ID="lblCursos" runat="server" Text="Label"></asp:Label>
+        </section>
+        <section class="experience"><br>
+          <h6  class="mb-1 ml-1">Conhecimentos Gerais:</h6><hr>
+            <asp:Label ID="lblConhecimentos" runat="server" Text="Label" Visible="False"></asp:Label>
+              <textarea rows="2" cols="3" id="txtConhecimentos" runat="server" placeholder="Descreva suas experiências profissinais" class="form-control mb-1 ml-1" style="border-style: none; border-color: #FFFFFF; height:180px; width:100%;"> 	
+              </textarea>
+		</section>
+        <section>
+          <h6  class="mb-1 ml-1">Experiências na Ilha:</h6><hr>
+            <li class="mb-1 ml-1"><asp:Label ID="lblExperienciaIlha" runat="server" Text="Label"></asp:Label></li>
+        </section>
+        <section><br>
+           <h6>Pretensão Salarial:</h6><hr>
+             <li class="mb-1 ml-1"><asp:Label ID="lblPretencaoSalario" runat="server" Text="Label"></asp:Label></li>
+        </section>
+        <section><br>
+           <h6  class="mb-1 ml-1">Mensagem do Candidato:</h6><hr>
+             <li  class="mb-1 ml-1"  class="mb-1 ml-1"><asp:Label ID="lblUltimoEmprego" runat="server" Text="Label" Visible="False"></asp:Label>
+              <textarea  class="mb-1 ml-1" rows="2" cols="3" id="txtUltimoEmprego" runat="server" placeholder="Descreva suas experiências profissinais" class="form-control" style="border-style: none; border-color: #FFFFFF; height:180px; width:100%;" name="S3"></textarea>
+             </li>
+        </section>
+        <section class="education"> 
+            <ol>
+              <li>
+               <div>
+                 <p class="sanserif"></p>
+               </div>
+               <div>
+                 <span>&copy WorkinNoronha.com</span>
+               </div>
+              </li>
+             </ol>
+        </section>
+     </div>
+
+
+
+    <!-- JavaScript (Opcional) -->
+    <!-- jQuery primeiro, depois Popper.js, depois Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  </body>
+</html>

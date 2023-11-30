@@ -1,0 +1,456 @@
+Uri: https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ajax\libs\highlight.js\9.12.0\highlight.min.js
+Content Type: application/javascript
+
+Uri: https://fonts.googleapis.com/css?family=Hind+Vadodara:400,500&display=swap
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\css-1
+Content Type: text/css
+
+Uri: https://fonts.gstatic.com/s/hindvadodara/v12/neINzCKvrIcn5pbuuuriV9tTQJLVqQ.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\s\hindvadodara\v12\neINzCKvrIcn5pbuuuriV9tTQJLVqQ.ttf
+Content Type: font/ttf
+
+Uri: https://fonts.gstatic.com/s/hindvadodara/v12/neIQzCKvrIcn5pbuuuriV9tTSGH2uXQ-pQ.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\s\hindvadodara\v12\neIQzCKvrIcn5pbuuuriV9tTSGH2uXQ-pQ.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-100-Italic.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-100-Italic.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-100.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-100.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-200-Italic.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-200-Italic.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-200.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-200.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-300-Italic.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-300-Italic.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-300.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-300.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-400-Italic.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-400-Italic.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-400.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-400.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-500-Italic.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-500-Italic.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-500.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-500.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-600-Italic.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-600-Italic.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-600.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-600.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-700-Italic.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-700-Italic.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-700.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-700.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-800-Italic.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-800-Italic.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-800.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-800.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-900-Italic.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-900-Italic.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost-900.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost-900.ttf
+Content Type: font/ttf
+
+Uri: https://indestructibletype.com/fonts/Jost.css
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\Jost.css
+Content Type: text/css
+
+Uri: https://maps.googleapis.com/maps/api/js?key=AIzaSyA-aWrwgr64q4b3TEZwQ0lkHI4lZK-moM4&callback=initMaps
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\maps\api\js
+Content Type: text/javascript
+
+Uri: https://spark.bootlab.io/calendar.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\calendar.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/charts-apexcharts.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\charts-apexcharts.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/charts-chartjs.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\charts-chartjs.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/css/modern.css
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\css\modern.css
+Content Type: text/css
+
+Uri: https://spark.bootlab.io/dashboard-analytics.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\dashboard-analytics.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/dashboard-default.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\dashboard-default.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/dashboard-default.html?theme=dark
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\dashboard-default-3.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/dashboard-default.html?theme=light
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\dashboard-default-2.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/dashboard-default.html?theme=modern
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\dashboard-default-1.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/dashboard-e-commerce.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\dashboard-e-commerce.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/docs-changelog.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\docs-changelog.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/docs-getting-started.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\docs-getting-started.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/docs-plugins.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\docs-plugins.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/fonts/fa-brands-400.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\fa-brands-400.ttf
+Content Type: font/ttf
+
+Uri: https://spark.bootlab.io/fonts/fa-brands-400.woff2
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\fa-brands-400.woff2
+Content Type: font/woff2
+
+Uri: https://spark.bootlab.io/fonts/fa-regular-400.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\fa-regular-400.ttf
+Content Type: font/ttf
+
+Uri: https://spark.bootlab.io/fonts/fa-regular-400.woff2
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\fa-regular-400.woff2
+Content Type: font/woff2
+
+Uri: https://spark.bootlab.io/fonts/fa-solid-900.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\fa-solid-900.ttf
+Content Type: font/ttf
+
+Uri: https://spark.bootlab.io/fonts/fa-solid-900.woff2
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\fa-solid-900.woff2
+Content Type: font/woff2
+
+Uri: https://spark.bootlab.io/fonts/ionicons.eot
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\ionicons.eot
+Content Type: application/octet-stream
+
+Uri: https://spark.bootlab.io/fonts/ionicons.svg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\ionicons.svg
+Content Type: image/svg+xml
+
+Uri: https://spark.bootlab.io/fonts/ionicons.ttf
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\ionicons.ttf
+Content Type: font/ttf
+
+Uri: https://spark.bootlab.io/fonts/ionicons.woff
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\ionicons.woff
+Content Type: application/font-woff
+
+Uri: https://spark.bootlab.io/fonts/ionicons.woff2
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\fonts\ionicons.woff2
+Content Type: font/woff2
+
+Uri: https://spark.bootlab.io/forms-advanced-elements.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\forms-advanced-elements.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/forms-basic-elements.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\forms-basic-elements.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/forms-editors.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\forms-editors.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/forms-floating-labels.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\forms-floating-labels.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/forms-input-groups.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\forms-input-groups.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/forms-layouts.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\forms-layouts.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/forms-validation.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\forms-validation.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/forms-wizard.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\forms-wizard.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/icons-feather.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\icons-feather.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/icons-font-awesome.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\icons-font-awesome.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/icons-ion.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\icons-ion.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/img/avatars/avatar-2.jpg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\avatars\avatar-2.jpg
+Content Type: image/jpeg
+
+Uri: https://spark.bootlab.io/img/avatars/avatar-3.jpg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\avatars\avatar-3.jpg
+Content Type: image/jpeg
+
+Uri: https://spark.bootlab.io/img/avatars/avatar-4.jpg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\avatars\avatar-4.jpg
+Content Type: image/jpeg
+
+Uri: https://spark.bootlab.io/img/avatars/avatar-5.jpg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\avatars\avatar-5.jpg
+Content Type: image/jpeg
+
+Uri: https://spark.bootlab.io/img/avatars/avatar.jpg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\avatars\avatar.jpg
+Content Type: image/jpeg
+
+Uri: https://spark.bootlab.io/img/brands/b.svg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\brands\b.svg
+Content Type: image/svg+xml
+
+Uri: https://spark.bootlab.io/img/brands/bootstrap.png
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\brands\bootstrap.png
+Content Type: image/png
+
+Uri: https://spark.bootlab.io/img/brands/npm.svg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\brands\npm.svg
+Content Type: image/svg+xml
+
+Uri: https://spark.bootlab.io/img/brands/sass.svg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\brands\sass.svg
+Content Type: image/svg+xml
+
+Uri: https://spark.bootlab.io/img/brands/webpack.svg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\brands\webpack.svg
+Content Type: image/svg+xml
+
+Uri: https://spark.bootlab.io/img/photos/unsplash-1.jpg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\photos\unsplash-1.jpg
+Content Type: image/jpeg
+
+Uri: https://spark.bootlab.io/img/photos/unsplash-2.jpg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\photos\unsplash-2.jpg
+Content Type: image/jpeg
+
+Uri: https://spark.bootlab.io/img/photos/unsplash-3.jpg
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\photos\unsplash-3.jpg
+Content Type: image/jpeg
+
+Uri: https://spark.bootlab.io/img/screenshots/dark.png
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\screenshots\dark.png
+Content Type: image/png
+
+Uri: https://spark.bootlab.io/img/screenshots/dashboard-analytics.png
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\screenshots\dashboard-analytics.png
+Content Type: image/png
+
+Uri: https://spark.bootlab.io/img/screenshots/dashboard-default.png
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\screenshots\dashboard-default.png
+Content Type: image/png
+
+Uri: https://spark.bootlab.io/img/screenshots/dashboard-e-commerce.png
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\screenshots\dashboard-e-commerce.png
+Content Type: image/png
+
+Uri: https://spark.bootlab.io/img/screenshots/light.png
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\screenshots\light.png
+Content Type: image/png
+
+Uri: https://spark.bootlab.io/img/screenshots/modern.png
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\img\screenshots\modern.png
+Content Type: image/png
+
+Uri: https://spark.bootlab.io/index.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\index.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/js/app.js
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\js\app.js
+Content Type: application/javascript
+
+Uri: https://spark.bootlab.io/js/settings.js
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\js\settings.js
+Content Type: application/javascript
+
+Uri: https://spark.bootlab.io/maps-google.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\maps-google.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/maps-vector.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\maps-vector.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-404.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-404.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-500.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-500.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-blank.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-blank.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-chat.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-chat.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-clients.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-clients.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-invoice.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-invoice.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-pricing.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-pricing.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-reset-password.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-reset-password.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-settings.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-settings.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-sign-in.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-sign-in.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-sign-up.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-sign-up.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/pages-tasks.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\pages-tasks.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/tables-bootstrap.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\tables-bootstrap.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/tables-datatables-ajax.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\tables-datatables-ajax.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/tables-datatables-buttons.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\tables-datatables-buttons.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/tables-datatables-column-search.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\tables-datatables-column-search.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/tables-datatables-fixed-header.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\tables-datatables-fixed-header.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/tables-datatables-multi.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\tables-datatables-multi.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/tables-datatables-responsive.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\tables-datatables-responsive.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-alerts.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-alerts.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-buttons.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-buttons.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-cards.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-cards.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-general.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-general.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-grid.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-grid.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-modals.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-modals.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-notifications.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-notifications.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-offcanvas.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-offcanvas.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-placeholders.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-placeholders.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-tabs.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-tabs.html
+Content Type: text/html
+
+Uri: https://spark.bootlab.io/ui-typography.html
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\ui-typography.html
+Content Type: text/html
+
+Uri: https://www.googletagmanager.com/gtag/js?id=UA-120946860-7
+File Name: C:\Downloaded Web Sites\spark.bootlab.io\gtag\js
+Content Type: application/javascript
+
