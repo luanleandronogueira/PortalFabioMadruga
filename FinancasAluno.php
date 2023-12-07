@@ -57,6 +57,7 @@
 			foreach ($mensalidade as $info_alunos) {
 				
 
+
 			}
 			
 		}		
@@ -255,7 +256,7 @@
 												<button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home" type="button" role="tab" aria-controls="home" aria-selected="true">Ano Atual</button>
 											</li>
 											<li class="nav-item" role="presentation">
-												<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Profile</button>
+												<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Recibos de Pagamento</button>
 											</li>
 											<li class="nav-item" role="presentation">
 												<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
@@ -363,6 +364,7 @@
 												<td class="text-success"><strong><?php echo $m['status_pagamento']; ?></strong></td>
 												<td> <a href="comprovantes/<?= $m['comprovante_pagamento'] ?>" target="_blank" rel="noopener noreferrer"><?php echo $m['comprovante_pagamento']; ?></a></td>
 												<td>
+												
 													
 													<!-- Janela modal para enviar a atualização do status do pagamento -->
 													<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#<?= $modal_id ?>">
@@ -408,6 +410,8 @@
 													</div>
 													</div>
 												</td>
+												
+												
 												
 											</tr>
 
@@ -488,7 +492,34 @@
 
 
 									</div>
-									<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">Pagas</div>
+
+									<!-- Páginas do Recibo de Pagamento -->
+									<div class="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+									 <div class="mt-4">
+											<?php foreach ($mensalidade as $recibo) { ?>
+													
+													<?php if ($recibo['status_pagamento'] == 'pago') { ?>
+														
+														
+			
+													<div class="alert alert-success alert-dismissible" role="alert">
+														<div class="alert-icon">
+															<i class="align-middle me-2 fas fa-fw fa-print"></i> <span class="align-middle"></span>
+														</div>
+														<div class="alert-message">
+															<a class="text-white" href="controladores/GerarRecibo.php?nome=<?= $info_alunos['nome_aluno']?>&&valorMensalidade=<?=$m['valor']?>&&mesPago=<?= $m['mes']?>&&ano<?=$m['ano']?>">
+																Gerar recibo de pagamento referente ao mês	<strong><?php echo $recibo['mes']?></strong>
+															</a>
+														</div>
+											</div>
+			
+													<?php }?>
+
+													
+											<?php } ?>
+									 </div>
+
+									</div>
 									<div class="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">Atra</div>
 								</div>
 
