@@ -1,0 +1,12 @@
+{
+    "font awesome\\ 6 brands": {
+        "normal": "font_awesome__6_brands_normal_b2c6488e33f90e51b51f20bf5829936b"
+    },
+    "font awesome\\ 6 free": {
+        "normal": "C:\\xampp\\htdocs\\portal-madruga\\controladores\\lib\\vendor\\dompdf\\dompdf\/lib\/fonts\/font_awesome__6_free_normal_df67f10ccc4fb43614773d4fa01a7225",
+        "900": "font_awesome__6_free_900_fa5d9aac4f4fdb2af9aea7e9134e6567"
+    },
+    "ionicons": {
+        "normal": "ionicons_normal_5b4824743417e0c14cd5633ff82fb126"
+    }
+}

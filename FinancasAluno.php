@@ -258,9 +258,9 @@
 											<li class="nav-item" role="presentation">
 												<button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile" type="button" role="tab" aria-controls="profile" aria-selected="false">Recibos de Pagamento</button>
 											</li>
-											<li class="nav-item" role="presentation">
+											<!-- <li class="nav-item" role="presentation">
 												<button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact" type="button" role="tab" aria-controls="contact" aria-selected="false">Contact</button>
-											</li>
+											</li> -->
 										</ul>
 								<div class="tab-content" id="myTabContent">
 									<div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
@@ -507,7 +507,7 @@
 															<i class="align-middle me-2 fas fa-fw fa-print"></i> <span class="align-middle"></span>
 														</div>
 														<div class="alert-message">
-															<a class="text-white" href="controladores/GerarRecibo.php?nome=<?= $info_alunos['nome_aluno']?>&&valorMensalidade=<?=$m['valor']?>&&mesPago=<?= $m['mes']?>&&ano<?=$m['ano']?>">
+															<a class="text-white" href="GerarRecibo.php?nome=<?= $info_alunos['nome_aluno']?>&&valorMensalidade=<?=$m['valor']?>&&mesPago=<?= $recibo['mes']?>&&ano=<?=$recibo['ano']?>">
 																Gerar recibo de pagamento referente ao mês	<strong><?php echo $recibo['mes']?></strong>
 															</a>
 														</div>
