@@ -110,8 +110,6 @@ if ($nome == "" or $valorMensalidade == "" or $mesPago == "" or $ano == "") {
     $dadosImpressao .= "</html>";
     // Fim do HTML
 
-
-
     $dompdf->loadHtml($dadosImpressao);
 
     // (Optional) Setup the paper size and orientation
@@ -121,7 +119,7 @@ if ($nome == "" or $valorMensalidade == "" or $mesPago == "" or $ano == "") {
     $dompdf->render();
 
     // Output the generated PDF to Browser
-    $dompdf->stream();
+    $dompdf->stream("Recibo de " . $nome . "do mês de " . $mesPago);
 
 }
 ?>

@@ -40,6 +40,7 @@ if ((empty($conexao)) || (empty($id_aluno)) || (empty($MesesSelecionados)) || (e
 
             header("Location: FinancasAluno.php?id=" . $id_aluno);
 
+        // para fins de debug  
         // echo '<pre>';
         //     echo $id_aluno . " "; 
         //     echo $mes . " ";

@@ -1,51 +1,26 @@
 <?php 
-
 	include 'controladores/controller.php';
-	//include 'controladores/conexao.php';
-    include 'controladores/gravaMensalidades.php';
+	include 'controladores/conexao.php';
 
     $conexao = new Conexao();
+
     $conn = $conexao->Conectar();
 
-    $id_aluno = $_GET['id'];
+	$query = 'SELECT nome_aluno FROM alunos';
 
-    // Verificar se o ID do aluno foi passado via GET
-    if (isset($_GET['id'])) {
-        $id_aluno = $_GET['id'];
+	$stmt = $conn->prepare($query);
 
-        $query = 'SELECT * FROM alunos WHERE id_aluno = :id_aluno';
-        $stmt = $conn->prepare($query);
-        $stmt->bindValue(":id_aluno", $id_aluno);
-        $stmt->execute();
-    
-        // Fetch the data
-        $aluno = $stmt->fetch(PDO::FETCH_ASSOC);
+	$stmt->execute();
 
-        //para fins de debug
-		//print_r($aluno);
+    $nomes_alunos = [];
 
-    } else {
+   while($aluno = $stmt->fetch(PDO::FETCH_ASSOC)) {
 
-        header("Location: alunos.php");
+        // Adicione o nome do aluno ao array
+        $nomes_alunos[] = $aluno['nome_aluno'];
 
     }
-
-    $mesesAnuais = [
-					'' => '0',
-					'Janeiro' => '01',
-                    'Fevereiro' => '02',
-                    'Março' => '03',
-                    'Abril' => '04',
-                    'Maio' => '05',
-                    'Junho' => '06',
-                    'Julho' => '07',
-                    'Agosto' => '08',
-                    'Setembro' => '09',
-                    'Outubro' => '10',
-                    'Novembro' => '11',
-                    'Dezembro' => '12'
-				];
-
+ 
 ?>
 
 <!DOCTYPE html>
@@ -58,25 +33,25 @@
 	<meta name="description" content="Modern, flexible and responsive Bootstrap 5 admin &amp; dashboard template">
 	<meta name="author" content="Bootlab">
 
-	<title>Cadastrar Novo Aluno - Fábio Madruga Concursos</title>
-
+	<title>Recibo Manual - Fábio Madruga Concursos</title>
 
 	<style>
 		body {
 			opacity: 0;
 		}
 	</style>
-	<script src="js/settings.js"></script>
-	<!-- END SETTINGS -->
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async="" src="gtag/js?id=UA-120946860-7"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
 
-		gtag('config', 'UA-120946860-7');
-	</script>
+	<script src="js/settings.js"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async="" src="gtag/js?id=UA-120946860-7"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'UA-120946860-7');
+    </script>
 </head>
 
 <body>
@@ -184,12 +159,8 @@
 							<a class="nav-link dropdown-toggle position-relative" href="#" id="userDropdown" data-bs-toggle="dropdown">
 								<i class="align-middle fas fa-cog"></i>
 							</a>
-							<div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-								<a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-user"></i> Meu Perfil</a>
-								<a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-cogs"></i> Alterar Senha</a>
-							<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Sair</a>
-							</div>
+							<!-- Barra de configurações -->
+                            <?php echo barraConfi() ?>
 						</li>
 					</ul>
 				</div>
@@ -199,12 +170,12 @@
 
 					<div class="header">
 						<h1 class="header-title">
-                        Gerenciar Mensalidades
+                        Gerar Recibo Manual
 						</h1>
 					</div>
 					<div class="row">
 						<div class="col-12">
-							<div class="card">
+                        <div class="card">
 								<div class="card-header">
 									<h5 class="card-title mb-0"></h5>
 								</div>
@@ -212,71 +183,34 @@
 								    <div class="card-body">
                                         <div class="container">
                                             <div class="row">
-                                                <div>
-                                                    <strong>Aluno:</strong> <?=$aluno['nome_aluno'] ?>
-                                                </div>
-                                                <hr>
-                                                <form action="CadastraMensalidades.php" method="post">
+                                                <center><h4>Recibo de Pagamento</h4></center>
 
-                                                    <!-- Input escondidos -->
-                                                    <!-- Id do Aluno -->
-                                                    <input type="hidden" name="id_aluno" value="<?=$id_aluno?>">
-                                                    <!-- Status do pagamento -->
-                                                    <input type="hidden" name="status_pagamento" value="aberto">
-													<!-- Comprovante pagamento -->
-													<input type="hidden" name="comprovante_pagamento" value=" ">
+                                                <form action="controladores/GerarPDFManual.php" method="$_GET">
 
-                                                    <div>
-                                                        <strong>Selecione o Ano</strong>
-                                                        <select class="form-control" name="ano">
-                                                            <?php
-                                                            $anoAtual = date("Y");
+                                                    <p>Declaro que recebi do aluno(a): 
+                                                        <select name="aluno" id="">
+                
+                                                        <?php foreach($nomes_alunos as $nome_aluno) { ?>
+                                                            <option name="<?= $nome_aluno ?>" value="<?= $nome_aluno ?>"><?= $nome_aluno ?></option>
+                                                        <?php } ?>
+                                                        
+                                                    </select>
                                                             
-                                                            // Defina o número de anos anteriores e futuros que você deseja incluir
-                                                            $anosAnteriores = 0;
-                                                            $anosFuturos = 5;
-                                                            
-                                                            // Loop para criar as opções com anos anteriores
-                                                            for ($i = $anoAtual - $anosAnteriores; $i <= $anoAtual + $anosFuturos; $i++) {
-                                                                echo "<option name='ano' value='$i'>$i</option>";
-                                                            }
-                                                            ?>
-                                                        </select>
-                                                    </div> <br>
+                                                    o valor de R$ <input type="text" name="valor"> referente ao mês de <input type="text" name="mes" id=""> pago em mãos. 
+                                                    Por meio deste recibo comprovamos o pagamento.
 
-                                                    <div class="mt-2">
-                                                        <strong>Selecione os Meses </strong><br>
-                                                        <?php foreach ($mesesAnuais as $m => $i) { 
-															if ($m !== '') { // Verifica se $m não está vazio
-														?>
-															<div class="form-check" style="display: inline-block; margin-right: 10px;">
-																<input class="form-check-input" type="checkbox" name="mes[]" value="<?=$i?>">
-																<label class="form-check-label">
-																	<?php echo $m ?>
-																</label>
-															</div>
-														<?php 
-															}
-														}?>
-                                                    </div><br>
+                                                    </p>
 
-                                                    <div class="mt-2">
-                                                        <div class="col-xl-3">
-                                                            <strong><label for="">Valor da Mensalidade:</label></strong>
-                                                            <input class="form-control" required type="text" name="valor" id="">
-                                                        </div>  
-                                                    </div>
-                                                            
+                                                    <center><button class="btn btn-warning" type="submit">Gerar Recibo</button></center>
 
-                                                    <button type='submit' class="btn btn-block btn-info mt-2" type="submit">Cadastrar Mensalidades</button>
-                                                
                                                 </form>
-                                               
+                                                
 
                                             </div>
                                         </div>
                                    
 								</div>
+							</div>
 							</div>
 						</div>
 					</div>
@@ -286,7 +220,7 @@
 
 				<!-- Rodapé -->
 				<?php echo footer()?>
-
+				
 			</footer>
 		</div>
 	</div>
@@ -302,6 +236,37 @@
 	<script src="js/app.js"></script>
     <script src="js/jquery.mask.js"></script>
     <script src="js/jquery.mask.min.js"></script>
+    <script>
+
+        $(document).ready(function(){
+            $('#cpf').mask('000.000.000-00');
+        });
+
+    </script>
+
+	<script>
+
+		$(document).ready(function(){
+			$('#telefone').mask('(00) 00000-0000');
+		});
+
+	</script>
+
+	<script>
+        const textoArea = document.getElementById('texto');
+        const contador = document.getElementById('contador');
+
+        textoArea.addEventListener('input', () => {
+            const comprimentoTexto = textoArea.value.length;
+            contador.textContent = comprimentoTexto;
+
+            // Se você quiser limitar o número máximo de caracteres, você pode usar o atributo "maxlength" no textarea.
+            // Caso contrário, você pode remover o atributo "maxlength" e adicionar uma condição aqui para limitar.
+            
+        });
+    </script>
+
+
 
 </body>
 

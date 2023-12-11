@@ -100,23 +100,10 @@
 	</div>
 
 	<div class="wrapper">
-		<nav id="sidebar" class="sidebar">
-			<a class="sidebar-brand" href="index.html">
-				<img>
-				
-				Portal Administrativo
-			</a>
-			<div class="sidebar-content">
-				<div class="sidebar-user">
-					<img src="img/avatars/logo.jpeg" class="img-fluid rounded-circle mb-2" alt="Linda Miller">
-					<div class="fw-bold">Nome do Aluno</div>
-					<small>Fábio Madruga Concursos</small>
-				</div>
-					
-					<?php sideBarAdm() ?>
 
-			</div>
-		</nav>
+		<!-- Barra administrativa lateral -->
+		<?php echo sideBarAdm() ?>
+		
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-theme">
 				<a class="sidebar-toggle d-flex me-2">
@@ -323,15 +310,10 @@
 				</div>
 			</main>
 			<footer class="footer">
-				<div class="container-fluid">
-					<div class="row text-muted">
-						<div class="col-4 text-end">
-							<p class="mb-0">
-								&copy; <?php echo date('Y') ?> - <span class="text-muted">Fábio Madruga Concursos</span>
-							</p>
-						</div>
-					</div>
-				</div>
+
+				<!-- Rodapé -->
+				<?php echo footer()?>
+				
 			</footer>
 		</div>
 	</div>

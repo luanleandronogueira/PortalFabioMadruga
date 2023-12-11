@@ -29,14 +29,6 @@
 
 	<title>Mensalidades - Fábio Madruga Concursos</title>
 
-	<!-- PICK ONE OF THE STYLES BELOW -->
-	<!-- <link href="css/modern.css" rel="stylesheet"> -->
-	<!-- <link href="css/classic.css" rel="stylesheet"> -->
-	<!-- <link href="css/dark.css" rel="stylesheet"> -->
-	<!-- <link href="css/light.css" rel="stylesheet"> -->
-
-	<!-- BEGIN SETTINGS -->
-	<!-- You can remove this after picking a style -->
 	<style>
 		body {
 			opacity: 0;
@@ -183,31 +175,10 @@
 				</div>
 			</main>
 			<footer class="footer">
-				<div class="container-fluid">
-					<div class="row text-muted">
-						<div class="col-8 text-start">
-							<ul class="list-inline">
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Support</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Privacy</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Terms of Service</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Contact</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-4 text-end">
-							<p class="mb-0">
-								&copy; 2022 - <a href="dashboard-default.html" class="text-muted">Spark</a>
-							</p>
-						</div>
-					</div>
-				</div>
+
+				<!-- Rodapé -->
+				<?php echo footer()?>
+
 			</footer>
 		</div>
 	</div>

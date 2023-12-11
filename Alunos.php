@@ -34,14 +34,7 @@
 
 	<title>Alunos - Fábio Madruga Concursos</title>
 
-	<!-- PICK ONE OF THE STYLES BELOW -->
-	<!-- <link href="css/modern.css" rel="stylesheet"> -->
-	<!-- <link href="css/classic.css" rel="stylesheet"> -->
-	<!-- <link href="css/dark.css" rel="stylesheet"> -->
-	<!-- <link href="css/light.css" rel="stylesheet"> -->
-
-	<!-- BEGIN SETTINGS -->
-	<!-- You can remove this after picking a style -->
+	
 	<style>
 		body {
 			opacity: 0;
@@ -65,23 +58,10 @@
 	</div>
 
 	<div class="wrapper">
-	<nav id="sidebar" class="sidebar">
-			<a class="sidebar-brand" href="index.html">
-				<img>
-				Portal Administrativo
-			</a>
-			<div class="sidebar-content">
-				<div class="sidebar-user">
-					<img src="img/avatars/logo.jpeg" class="img-fluid rounded-circle mb-2" alt="Linda Miller">
-					<div class="fw-bold">Nome do Aluno</div>
-					<small>Fábio Madruga Concursos</small>
-				</div>
-					
-					<!-- Barra lateral -->
-					<?php sideBarAdm() ?>
-
-			</div>
-		</nav>
+		
+		<!-- Barra administrativa lateral -->
+		<?php echo sideBarAdm() ?>
+		
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-theme">
 				<a class="sidebar-toggle d-flex me-2">
@@ -108,7 +88,7 @@
 									<!-- Dados inserir aqui -->
 								</div>
 								<div class="dropdown-menu-footer">
-									<a href="#" class="text-muted">Show all messages</a>
+									<a href="#" class="text-muted">Mensagens</a>
 								</div>
 							</div>
 						</li>
@@ -117,14 +97,8 @@
 							<a class="nav-link dropdown-toggle position-relative" href="#" id="userDropdown" data-bs-toggle="dropdown">
 								<i class="align-middle fas fa-cog"></i>
 							</a>
-							<div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
-								<a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-user"></i> View Profile</a>
-								<a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-comments"></i> Contacts</a>
-								<a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-chart-pie"></i> Analytics</a>
-								<a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-cogs"></i> Settings</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Sign out</a>
-							</div>
+								<!-- Barra de configurações -->
+								<?php echo barraConfi() ?>
 						</li>
 					</ul>
 				</div>
@@ -191,31 +165,10 @@
 				</div>
 			</main>
 			<footer class="footer">
-				<div class="container-fluid">
-					<div class="row text-muted">
-						<div class="col-8 text-start">
-							<ul class="list-inline">
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Support</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Privacy</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Terms of Service</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Contact</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-4 text-end">
-							<p class="mb-0">
-								&copy; 2022 - <a href="dashboard-default.html" class="text-muted">Spark</a>
-							</p>
-						</div>
-					</div>
-				</div>
+				
+				<!-- Rodapé -->
+				<?php echo footer()?>
+
 			</footer>
 		</div>
 	</div>

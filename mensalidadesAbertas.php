@@ -60,23 +60,10 @@
 	</div>
 
 	<div class="wrapper">
-	<nav id="sidebar" class="sidebar">
-			<a class="sidebar-brand" href="index.html">
-				<img>
-				Portal Administrativo
-			</a>
-			<div class="sidebar-content">
-				<div class="sidebar-user">
-					<img src="img/avatars/logo.jpeg" class="img-fluid rounded-circle mb-2" alt="Linda Miller">
-					<div class="fw-bold">Nome do Aluno</div>
-					<small>Fábio Madruga Concursos</small>
-				</div>
-					
-					<!-- Barra lateral -->
-					<?php sideBarAdm() ?>
 
-			</div>
-		</nav>
+		<!-- Barra administrativa lateral -->
+		<?php echo sideBarAdm() ?>
+		
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-theme">
 				<a class="sidebar-toggle d-flex me-2">
@@ -184,31 +171,10 @@
 				</div>
 			</main>
 			<footer class="footer">
-				<div class="container-fluid">
-					<div class="row text-muted">
-						<div class="col-8 text-start">
-							<ul class="list-inline">
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Support</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Privacy</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Terms of Service</a>
-								</li>
-								<li class="list-inline-item">
-									<a class="text-muted" href="#">Contact</a>
-								</li>
-							</ul>
-						</div>
-						<div class="col-4 text-end">
-							<p class="mb-0">
-                            <?php echo date('Y')?> - <a href="dashboard-default.html" class="text-muted">Fábio Madruga Concursos</a>
-							</p>
-						</div>
-					</div>
-				</div>
+
+				<!-- Rodapé -->
+				<?php echo footer()?>
+				
 			</footer>
 		</div>
 	</div>

@@ -25,14 +25,7 @@
 
 	<title>Cadastrar Novo Aluno - Fábio Madruga Concursos</title>
 
-	<!-- PICK ONE OF THE STYLES BELOW -->
-	<!-- <link href="css/modern.css" rel="stylesheet"> -->
-	<!-- <link href="css/classic.css" rel="stylesheet"> -->
-	<!-- <link href="css/dark.css" rel="stylesheet"> -->
-	<!-- <link href="css/light.css" rel="stylesheet"> -->
 
-	<!-- BEGIN SETTINGS -->
-	<!-- You can remove this after picking a style -->
 	<style>
 		body {
 			opacity: 0;
@@ -40,15 +33,16 @@
 	</style>
 	<script src="js/settings.js"></script>
 	<!-- END SETTINGS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="gtag/js?id=UA-120946860-7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async="" src="gtag/js?id=UA-120946860-7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
 
-  gtag('config', 'UA-120946860-7');
-</script></head>
+	gtag('config', 'UA-120946860-7');
+	</script>
+</head>
 
 <body>
 	<div class="splash active">
@@ -56,24 +50,10 @@
 	</div>
 
 	<div class="wrapper">
-		<nav id="sidebar" class="sidebar">
-			<a class="sidebar-brand" href="index.html">
-				<img>
-				
-				Portal Administrativo
-			</a>
-			<div class="sidebar-content">
-				<div class="sidebar-user">
-					<img src="img/avatars/logo.jpeg" class="img-fluid rounded-circle mb-2" alt="Linda Miller">
-					<div class="fw-bold">Nome do Aluno</div>
-					<small>Fábio Madruga Concursos</small>
-				</div>
-					
-					<?php sideBarAdm() ?>
 
-
-			</div>
-		</nav>
+		<!-- Barra administrativa lateral -->
+		<?php echo sideBarAdm() ?>
+		
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-theme">
 				<a class="sidebar-toggle d-flex me-2">
@@ -263,15 +243,10 @@
 				</div>
 			</main>
 			<footer class="footer">
-				<div class="container-fluid">
-					<div class="row text-muted">
-						<div class="col-4 text-end">
-							<p class="mb-0">
-								&copy; <?php echo date('Y') ?> - <span class="text-muted">Fábio Madruga Concursos</span>
-							</p>
-						</div>
-					</div>
-				</div>
+
+				<!-- Rodapé -->
+				<?php echo footer()?>
+				
 			</footer>
 		</div>
 	</div>

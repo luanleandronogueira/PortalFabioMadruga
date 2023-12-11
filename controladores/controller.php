@@ -2,22 +2,67 @@
 function sideBarAdm(){
 
     print '
-    <ul class="sidebar-nav">
-    <li class="sidebar-header">
-        Menu
-    </li>
-    <li class="sidebar-item">
-        <a class="sidebar-link" href="alunos.php">
-            <i class="align-middle me-2 fas fa-fw fa-users"></i> <span class="align-middle">Alunos</span>
-        </a>
-        <a class="sidebar-link" href="mensalidades.php">
-            <i class="align-middle me-2 fas fa-fw fa-money-bill-wave"></i> <span class="align-middle">Mensalidades</span>
-        </a>
-    </li>
-    
-</ul>';
+        <nav id="sidebar" class="sidebar">
+            <a class="sidebar-brand" href="index.html">
+                <img>
+                Portal Administrativo
+            </a>
+            <div class="sidebar-content">
+                <div class="sidebar-user">
+                    <img src="img/avatars/logo.jpeg" class="img-fluid rounded-circle mb-2" alt="Linda Miller">
+                    <div class="fw-bold">Fábio Madruga Concursos</div>
+                    <small>Esse nome aprova!</small>
+                </div>
+                    
+                <ul class="sidebar-nav">
+            <li class="sidebar-header">
+                Menu
+            </li>
+            <li class="sidebar-item">
+                <a class="sidebar-link" href="alunos.php">
+                    <i class="align-middle me-2 fas fa-fw fa-users"></i> <span class="align-middle">Alunos</span>
+                </a>
+                <a class="sidebar-link" href="mensalidades.php">
+                    <i class="align-middle me-2 fas fa-fw fa-money-bill-wave"></i> <span class="align-middle">Mensalidades</span>
+                </a>
+                <a class="sidebar-link" href="mensalidades.php">
+                    <i class="align-middle me-2 fas fa-fw fa-money-check-alt"></i> <span class="align-middle">Gerar Recibo Manual</span>
+                </a>
+            </li>
+            </ul>
+
+            </div>
+        </nav>';
 
 };
+
+function barraConfi() {
+
+    print ' <div class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-user"></i> Meu Perfil</a>
+                <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-cogs"></i> Alterar Senha</a>
+            <div class="dropdown-divider"></div>
+                <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Sair</a>
+            </div>';
+};
+
+function footer() {
+
+
+    print "<div class='container-fluid'>
+            <div class='row text-muted'>
+                <div class='col-4 text-end'>
+                    <p class='mb-0'>
+                        &copy; <?php echo date('Y') ?> - <span class='text-muted'>Fábio Madruga Concursos</span>
+                    </p>
+                </div>
+            </div>
+        </div>";
+
+
+
+
+}
 
 
 
