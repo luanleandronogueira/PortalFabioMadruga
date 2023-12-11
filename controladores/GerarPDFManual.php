@@ -10,12 +10,10 @@ $valor = $_GET['valor'];
 $mes = $_GET['mes'];
 $ano = date('Y');
 
-
 // instantiate and use the dompdf class
 $dompdf = new Dompdf(['enable_remote' => true]);
 
 $dadosImpressao = "";
-
 
 // Head e inicio da página html
 $dadosImpressao .= "<!DOCTYPE html>";
@@ -26,7 +24,6 @@ $dadosImpressao .= "<meta http-equiv='X-UA-Compatible' content='IE=edge'>";
 $dadosImpressao .= "<meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>";
 $dadosImpressao .= "<link rel='stylesheet' href='http://localhost/portal-madruga/css/recibo.css'>";
 $dadosImpressao .= "</head>";
-
 
 // Inicia o Body do HTML
 $dadosImpressao .= "<body class='theme-blue'>";
@@ -61,6 +58,5 @@ $dompdf->render();
 
 // Output the generated PDF to Browser
 $dompdf->stream("Recibo de " . $nome . " do mês de " . $mes);
-
 
 ?>

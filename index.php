@@ -1,23 +1,14 @@
-﻿<!DOCTYPE html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="pt-br">
 
 <head>
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Modern, flexible and responsive Bootstrap 5 admin &amp; dashboard template">
-	<meta name="author" content="Bootlab">
-
+	
 	<title>Área do Aluno - Fábio Madruga Concursos</title>
 
-	<!-- PICK ONE OF THE STYLES BELOW -->
-	<!-- <link href="css/modern.css" rel="stylesheet"> -->
-	<!-- <link href="css/classic.css" rel="stylesheet"> -->
-	<!-- <link href="css/dark.css" rel="stylesheet"> -->
-	<!-- <link href="css/light.css" rel="stylesheet"> -->
 
-	<!-- BEGIN SETTINGS -->
-	<!-- You can remove this after picking a style -->
 	<style>
 		body {
 			opacity: 0;
@@ -58,26 +49,29 @@
 							<div class="card-body">
 								<div class="m-sm-4">
 									<div class="text-center">
-										<img src="img/avatars/logo.jpeg" alt="Linda Miller" class="img-fluid rounded-circle" width="132" height="132">
+										<img src="img/avatars/logo.jpeg" class="img-fluid rounded-circle" width="132" height="132">
 									</div>
-									<form>
+									<form action="controladores/AutenticaLogin.php" method="post">
 										<div class="mb-3">
 											<label>Login</label>
-											<input class="form-control form-control-lg" type="email" name="email" placeholder="Digite seu Login">
+											<input class="form-control form-control-lg" id="cpf" type="text" maxlength="14" name="usuario_aluno" placeholder="Digite seu Login">
 										</div>
 										<div class="mb-3">
 											<label>Senha</label>
-											<input class="form-control form-control-lg" type="password" name="password" placeholder="Digite sua Senha">
+											<input class="form-control form-control-lg" type="password" name="senha_aluno" placeholder="Digite sua Senha">
 										</div>
-										<div>
-											<div class="form-check align-items-center">
-												<input id="customControlInline" type="checkbox" class="form-check-input" value="remember-me" name="remember-me" checked="">
-												<label class="form-check-label text-small" for="customControlInline">Lembrar</label>
-											</div>
-										</div>
+
+                                        <?php if(!empty($_GET['erro'])) {
+
+                                            $mensagem ='Usuário ou Senha inválidos';
+                                            echo '<h3>' . $mensagem . '</h3>';
+
+                                        } ?>
+
+								
 										<div class="text-center mt-3">
-											<a href="dashboard-default.html" class="btn btn-lg btn-success">Entrar</a>
-											<!-- <button type="submit" class="btn btn-lg btn-primary">Sign in</button> -->
+											<button type="submit" name="enviar_requisicao" class="btn btn-lg btn-success">Entrar</button>
+											
 										</div>
 									</form>
 								</div>
@@ -98,6 +92,13 @@
 		</defs>
 	</svg>
 	<script src="js/app.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+            $('#cpf').mask('000.000.000-00');
+        });
+        
+    </script>
 
 </body>
 
