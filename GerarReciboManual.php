@@ -1,6 +1,10 @@
 <?php 
 	include 'controladores/controller.php';
-	include 'controladores/conexao.php';
+	// include 'controladores/conexao.php';
+	include 'controladores/classes.php';
+
+	// Verifica se há sessão aberta.
+	verificarSessao();
 
     $conexao = new Conexao();
 

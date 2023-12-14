@@ -15,16 +15,26 @@
 		}
 	</style>
 	<script src="js/settings.js"></script>
-	<!-- END SETTINGS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="gtag/js?id=UA-120946860-7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-120946860-7');
-</script></head>
+	<!-- Quando carregar a página não retornar avisos -->
+	<script>
+        // Verifique se a página foi recarregada (atualizada)
+        if (performance.navigation.type === 1) {
+            // Redirecione para a URL desejada
+            window.location.href = 'index.php';
+        }
+    </script>
+
+	<script async="" src="gtag/js?id=UA-120946860-7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-120946860-7');
+	</script>
+
+</head>
 <!-- SET YOUR THEME -->
 
 <body class="theme-blue" style="background-color:#016430">
@@ -54,19 +64,28 @@
 									<form action="controladores/AutenticaLogin.php" method="post">
 										<div class="mb-3">
 											<label>Login</label>
-											<input class="form-control form-control-lg" id="cpf" type="text" maxlength="14" name="usuario_aluno" placeholder="Digite seu Login">
+											<input class="form-control form-control-lg" id="cpf" type="text" maxlength="14" name="usuario_aluno" required placeholder="Digite seu Login">
 										</div>
 										<div class="mb-3">
 											<label>Senha</label>
-											<input class="form-control form-control-lg" type="password" name="senha_aluno" placeholder="Digite sua Senha">
+											<input required class="form-control form-control-lg" type="password" name="senha_aluno" placeholder="Digite sua Senha">
 										</div>
 
-                                        <?php if(!empty($_GET['erro'])) {
+                                        <!-- Verificação de Autenticidade do Login -->
+                                        <?php if(isset($_GET['erro']) == "1") {
 
                                             $mensagem ='Usuário ou Senha inválidos';
                                             echo '<h3>' . $mensagem . '</h3>';
 
                                         } ?>
+
+										<!-- Verificação de Autenticidade do Login -->
+                                        <?php if(isset($_GET['usuario']) == "negado") {
+
+											$_SESSION['msg'] = "<p style='color: #ff0000'>Erro: Necessário realizar o login para acessar a página!	</p>";;
+											echo '<h3>' . $_SESSION['msg'] . '</h3>';
+
+										} ?>
 
 								
 										<div class="text-center mt-3">

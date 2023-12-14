@@ -10,7 +10,6 @@
 				LEFT JOIN mensalidades ON alunos.id_aluno = mensalidades.id_aluno
 				WHERE mensalidades.status_pagamento = 'aberto'  AND mensalidades.ano = YEAR(CURRENT_DATE)";
 
-
 	$stmt = $conn->prepare($query);
 
 	$stmt->execute();
@@ -52,23 +51,10 @@
 	</div>
 
 	<div class="wrapper">
-	<nav id="sidebar" class="sidebar">
-			<a class="sidebar-brand" href="index.html">
-				<img>
-				Portal Administrativo
-			</a>
-			<div class="sidebar-content">
-				<div class="sidebar-user">
-					<img src="img/avatars/logo.jpeg" class="img-fluid rounded-circle mb-2" alt="Linda Miller">
-					<div class="fw-bold">Nome do Aluno</div>
-					<small>Fábio Madruga Concursos</small>
-				</div>
-					
-					<!-- Barra lateral -->
-					<?php sideBarAdm() ?>
 
-			</div>
-		</nav>
+		<!-- Barra lateral -->
+		<?php sideBarAdm() ?>
+
 		<div class="main">
 			<nav class="navbar navbar-expand navbar-theme">
 				<a class="sidebar-toggle d-flex me-2">

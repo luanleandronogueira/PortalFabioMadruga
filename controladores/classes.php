@@ -56,9 +56,6 @@ class Aluno {
 
             header('Location: ../alunos.php?inclusao=0');
 
-
-            // dispado para email usando a biblioteca PHPMailer
-
         }
 
     }
@@ -88,5 +85,20 @@ class Aluno {
         }
     }
     
-
 }
+
+// Função para verificar se há uma sessão aberta
+function verificarSessao() {
+    session_start();
+    // ob_start(); // Se necessário, descomente esta linha
+
+    if ((!isset($_SESSION['id_usuario'])) AND (!isset($_SESSION['nome_usuario']))) {
+        $_SESSION['msg'] = "<p style='color: #ff0000'>Erro: Necessário realizar o login para acessar a página! </p>";
+        header("Location: index.php?usuario=negado");
+        exit(); // Importante para evitar execução adicional após o redirecionamento
+    }
+}
+
+
+
+

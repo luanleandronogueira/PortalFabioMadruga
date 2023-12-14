@@ -25,7 +25,7 @@ function sideBarAdm(){
                 <a class="sidebar-link" href="mensalidades.php">
                     <i class="align-middle me-2 fas fa-fw fa-money-bill-wave"></i> <span class="align-middle">Mensalidades</span>
                 </a>
-                <a class="sidebar-link" href="mensalidades.php">
+                <a class="sidebar-link" href="GerarReciboManual.php">
                     <i class="align-middle me-2 fas fa-fw fa-money-check-alt"></i> <span class="align-middle">Gerar Recibo Manual</span>
                 </a>
             </li>
@@ -42,7 +42,7 @@ function barraConfi() {
                 <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-user"></i> Meu Perfil</a>
                 <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-cogs"></i> Alterar Senha</a>
             <div class="dropdown-divider"></div>
-                <a class="dropdown-item" href="#"><i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Sair</a>
+                <a class="dropdown-item" href="controladores/SairSessao.php"><i class="align-middle me-1 fas fa-fw fa-arrow-alt-circle-right"></i> Sair</a>
             </div>';
 };
 

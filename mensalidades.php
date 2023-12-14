@@ -1,7 +1,10 @@
 <?php 
+
 	include 'controladores/controller.php';
 	include 'controladores/classes.php';
 
+	// Verifica se há sessão aberta.
+	verificarSessao();
 
 	$conn = $conexao->Conectar();
 

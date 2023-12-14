@@ -1,7 +1,10 @@
-﻿<?php 
+﻿<?php
+
 	include 'controladores/controller.php';
 	include 'controladores/classes.php';
 
+	// Verifica se há sessão aberta.
+	verificarSessao();
 
 	$conn = $conexao->Conectar();
 
@@ -20,16 +23,16 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	<meta name="description" content="Modern, flexible and responsive Bootstrap 5 admin &amp; dashboard template">
+	
 
 	<!-- Quando carregar a página não retornar avisos -->
-	<script>
+	<!-- <script>
         // Verifique se a página foi recarregada (atualizada)
         if (performance.navigation.type === 1) {
             // Redirecione para a URL desejada
             window.location.href = 'alunos.php';
         }
-    </script>
+    </script> -->
 	
 
 	<title>Alunos - Fábio Madruga Concursos</title>

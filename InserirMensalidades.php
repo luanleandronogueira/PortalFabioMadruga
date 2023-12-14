@@ -4,6 +4,9 @@
 	//include 'controladores/conexao.php';
     include 'controladores/gravaMensalidades.php';
 
+	// Verifica se há sessão aberta.
+	verificarSessao();
+
     $conexao = new Conexao();
     $conn = $conexao->Conectar();
 
