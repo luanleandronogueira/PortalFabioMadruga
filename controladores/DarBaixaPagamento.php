@@ -13,15 +13,24 @@
     $conexao = new Conexao();
     $conn = $conexao->Conectar();
 
-    // recebe dados por $POST
-    $status_mensalidade_atualizado = $_POST['status_pagamento'];
-    $id_mensalidade = $_POST['id_mensalidade'];
-    $id_aluno = $_POST['id_aluno'];
-    $nome_aluno = $_POST['nome_aluno'];
-    $mes = $_POST['mes'];
-    $ano = $_POST['ano'];
-    $endereco_salva = ""; 
-    $endereco_pasta = ''; 
+    if ($_POST['status_pagamento'] == "" || $_POST['id_mensalidade'] == "" || $_POST['id_aluno'] == "" || $_POST['nome_aluno'] == "" || $_POST['mes'] == "" || $_POST['ano'] == "") {
+
+        header("Location: ../alunos.php?usuario=negado");
+
+    } else {
+
+          // recebe dados por $POST
+        $status_mensalidade_atualizado = $_POST['status_pagamento'];
+        $id_mensalidade = $_POST['id_mensalidade'];
+        $id_aluno = $_POST['id_aluno'];
+        $nome_aluno = $_POST['nome_aluno'];
+        $mes = $_POST['mes'];
+        $ano = $_POST['ano'];
+        $endereco_salva = ""; 
+        $endereco_pasta = ''; 
+
+
+    }
 
     // echo '<pre>';
     //     print_r($_FILES);
@@ -29,7 +38,7 @@
     // echo $_FILES['comprovante']['name'] . '</br>';
 
 
-        if (!empty($_FILES) || $id_aluno == ' ') {
+        if (!empty($_FILES) || !empty($_POST)) {
 
             if ($_FILES['comprovante']['type'] == 'application/pdf' || 
                 $_FILES['comprovante']['type'] == 'image/jpg' || 

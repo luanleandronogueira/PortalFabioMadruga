@@ -1,7 +1,13 @@
 <?php 
+
+	//Permite o include de arquivos que não podem ser abertos no navegador
+	define('__INCLUDED_BY_OTHER_FILE__', true);
+
 	include 'controladores/controller.php';
 	include 'controladores/classes.php';
 
+	// Verifica se há sessão aberta.
+	verificarSessao();
 
 	$conn = $conexao->Conectar();
 
@@ -9,7 +15,6 @@
 				FROM alunos
 				LEFT JOIN mensalidades ON alunos.id_aluno = mensalidades.id_aluno
 				WHERE mensalidades.status_pagamento = 'aberto'";
-
 
 	$stmt = $conn->prepare($query);
 
@@ -29,30 +34,22 @@
 
 	<title>Mensalidades - Fábio Madruga Concursos</title>
 
-	<!-- PICK ONE OF THE STYLES BELOW -->
-	<!-- <link href="css/modern.css" rel="stylesheet"> -->
-	<!-- <link href="css/classic.css" rel="stylesheet"> -->
-	<!-- <link href="css/dark.css" rel="stylesheet"> -->
-	<!-- <link href="css/light.css" rel="stylesheet"> -->
-
-	<!-- BEGIN SETTINGS -->
-	<!-- You can remove this after picking a style -->
 	<style>
 		body {
 			opacity: 0;
 		}
 	</style>
 	<script src="js/settings.js"></script>
-	<!-- END SETTINGS -->
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async="" src="gtag/js?id=UA-120946860-7"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
 
-  gtag('config', 'UA-120946860-7');
-</script></head>
+	<script async="" src="gtag/js?id=UA-120946860-7"></script>
+	<script>
+	window.dataLayer = window.dataLayer || [];
+	function gtag(){dataLayer.push(arguments);}
+	gtag('js', new Date());
+
+	gtag('config', 'UA-120946860-7');
+	</script>
+</head>
 
 <body>
 	<div class="splash active">

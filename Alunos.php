@@ -1,5 +1,8 @@
 ﻿<?php
 
+	//Permite o include de arquivos que não podem ser abertos no navegador
+	define('__INCLUDED_BY_OTHER_FILE__', true);
+
 	include 'controladores/controller.php';
 	include 'controladores/classes.php';
 
@@ -23,17 +26,7 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-	
 
-	<!-- Quando carregar a página não retornar avisos -->
-	<!-- <script>
-        // Verifique se a página foi recarregada (atualizada)
-        if (performance.navigation.type === 1) {
-            // Redirecione para a URL desejada
-            window.location.href = 'alunos.php';
-        }
-    </script> -->
-	
 
 	<title>Alunos - Fábio Madruga Concursos</title>
 

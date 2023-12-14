@@ -1,5 +1,8 @@
 <?php 
 
+//Permite o include de arquivos que não podem ser abertos no navegador
+define('__INCLUDED_BY_OTHER_FILE__', true);
+
 //  include 'classes.php';
 include 'conexao.php';
 
@@ -23,14 +26,7 @@ include 'conexao.php';
             header("Location: alunos.php");
             die;
 
-        } else {
-
-           
-        
-
-            
-        }
-
+        } 
 
     } else {
 
@@ -52,7 +48,6 @@ include 'conexao.php';
         $endereco_aluno = ucwords($_POST['endereco_aluno']);
         $senha_portal_aluno = $_POST['senha_portal_aluno'];
         $status_aluno = $_POST['status_aluno'];
-
 
         $query = "UPDATE alunos
         SET nome_aluno = :nome_completo, cpf_aluno = :cpf_aluno, contato_aluno = :contato_aluno, data_nascimento_aluno = :data_nascimento_aluno, email_aluno = :email_aluno, endereco_aluno = :endereco_aluno, senha_portal_aluno = :senha_portal_aluno, status_aluno = :status_aluno  WHERE id_aluno = :id_aluno";
@@ -76,21 +71,8 @@ include 'conexao.php';
     }
 
     //  $Dados = $_POST;
-
     //  echo '<pre>';
     //     print_r($Dados);
     //  echo '</pre>';
-
-   
-            
-
-
-
-
-
-
-
-
-
 
 ?>

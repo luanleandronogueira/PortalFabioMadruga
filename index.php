@@ -72,12 +72,21 @@
 										</div>
 
                                         <!-- Verificação de Autenticidade do Login -->
-                                        <?php if(isset($_GET['erro']) == "1") {
+                                        <?php if(isset($_GET['erro']) == "1") { 
 
-                                            $mensagem ='Usuário ou Senha inválidos';
-                                            echo '<h3>' . $mensagem . '</h3>';
+                                            $mensagem ='Usuário ou Senha inválidos'; ?>
+											<div class="alert alert-danger alert-outline alert-dismissible" role="alert">
+												<div class="alert-icon">
+													<i class="far fa-fw fa-bell"></i>
+												</div>
+												<div class="alert-message">
+													<h4><?php echo $mensagem ?></h4>
+												</div>
 
-                                        } ?>
+												<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+											</div>
+
+                                       	<?php } ?>
 
 										<!-- Verificação de Autenticidade do Login -->
                                         <?php if(isset($_GET['usuario']) == "negado") {

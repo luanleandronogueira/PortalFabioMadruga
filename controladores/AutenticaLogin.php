@@ -1,6 +1,9 @@
 <?php 
 session_start();
 
+//Permite o include de arquivos que não podem ser abertos no navegador
+define('__INCLUDED_BY_OTHER_FILE__', true);
+
 include "conexao.php";
 $conexao = new Conexao;
 $conn = $conexao->Conectar();
@@ -32,7 +35,7 @@ if (!empty($login) and !empty($senha)) {
 
             $_SESSION['id_usuario'] = $usuario['id_usuario'];
             $_SESSION['nome_usuario'] = $usuario['nome_usuario'];
-            header('Location: ../alunos.php');
+            header('Location: ../home.php');
             
             // echo '<pre>';
             //     print_r($usuario);

@@ -1,7 +1,13 @@
-<?php 
+<?php
+
+	//Permite o include de arquivos que não podem ser abertos no navegador
+	define('__INCLUDED_BY_OTHER_FILE__', true);
+
 	include 'controladores/controller.php';
 	include 'controladores/classes.php';
 
+	// Verifica se há sessão aberta.
+	verificarSessao();
 
 	$conn = $conexao->Conectar();
 

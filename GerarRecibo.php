@@ -119,7 +119,7 @@ if ($nome == "" or $valorMensalidade == "" or $mesPago == "" or $ano == "") {
     $dompdf->render();
 
     // Output the generated PDF to Browser
-    $dompdf->stream("Recibo de " . $nome . "do mês de " . $mesPago);
+    $dompdf->stream("Recibo de " . $nome . " do mês de " . $mesPago);
 
 }
 ?>

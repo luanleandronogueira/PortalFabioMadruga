@@ -1,5 +1,12 @@
 <?php 
 
+if (!defined('__INCLUDED_BY_OTHER_FILE__')) {
+    // Se a constante não estiver definida, encerre a execução
+    header('HTTP/1.0 403 Forbidden');
+    header("Location: ./index.php");
+    exit('Acesso proibido');
+}
+
 include 'conexao.php';
 
 $conexao = new Conexao();
@@ -97,6 +104,109 @@ function verificarSessao() {
         header("Location: index.php?usuario=negado");
         exit(); // Importante para evitar execução adicional após o redirecionamento
     }
+}
+
+// Função para selecionar no banco de dados todos os alunos
+function contaAlunos() {
+
+    $conexao = new Conexao();
+
+    $conn = $conexao->Conectar();
+
+	$query = 'SELECT * FROM alunos';
+
+	$stmt = $conn->prepare($query);
+
+	$stmt->execute();
+
+    $contagemAlunos = $stmt->rowCount();
+
+    return $contagemAlunos;
+
+
+}
+
+// Função para selecionar no banco de dados os alunos ativos
+function contaAlunosAtivos() {
+
+    $conexao = new Conexao();
+
+    $conn = $conexao->Conectar();
+
+	$query = 'SELECT * FROM alunos WHERE status_aluno = 0';
+
+	$stmt = $conn->prepare($query);
+
+	$stmt->execute();
+
+    $contagemAlunosAtivos = $stmt->rowCount();
+
+    return $contagemAlunosAtivos;
+
+
+}
+
+// Função para selecionar no banco de dados os alunos inativos
+function contaAlunosInativos() {
+
+    $conexao = new Conexao();
+
+    $conn = $conexao->Conectar();
+
+	$query = 'SELECT * FROM alunos WHERE status_aluno = 1';
+
+	$stmt = $conn->prepare($query);
+
+	$stmt->execute();
+
+    $contagemAlunosInativos = $stmt->rowCount();
+
+    return $contagemAlunosInativos;
+
+
+}
+
+function mensalidadesAtrasadas() {
+
+    $conexao = new Conexao();
+
+    $conn = $conexao->Conectar();
+
+	$query = "SELECT * FROM mensalidades 
+              WHERE status_pagamento = 'aberto'";
+
+	$stmt = $conn->prepare($query);
+
+	$stmt->execute();
+
+    $contagemMensalidadeAtrasadas = $stmt->rowCount();
+
+    return $contagemMensalidadeAtrasadas;
+
+
+}
+
+function listaUltimosAlunos() {
+
+    $conexao = new Conexao();
+
+    $conn = $conexao->Conectar();
+
+	$query = "SELECT * FROM alunos ORDER BY id_aluno DESC
+    LIMIT 10";
+
+	$stmt = $conn->prepare($query);
+
+	$stmt->execute();
+
+    while ($Alunos = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+        $ultimosAlunos[] = $Alunos;
+
+    }
+
+    return $ultimosAlunos;
+
 }
 
 

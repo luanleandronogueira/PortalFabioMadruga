@@ -1,5 +1,12 @@
 <?php 
 
+if (!defined('__INCLUDED_BY_OTHER_FILE__')) {
+    // Se a constante não estiver definida, encerre a execução
+    header('HTTP/1.0 403 Forbidden');
+    header("Location: ../index.php");
+    exit('Acesso proibido');
+}
+
    class Conexao {
 
     private $host = "localhost";

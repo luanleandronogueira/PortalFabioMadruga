@@ -1,5 +1,6 @@
 <?php 
 
+// Encerrar Sessão 
 session_start();
 ob_start();
 unset($_SESSION['id_usuario'], $_SESSION['nome_usuario']);

@@ -1,4 +1,14 @@
 <?php 
+
+
+// Proibe o acesso a esses arquivos no navegador
+if (!defined('__INCLUDED_BY_OTHER_FILE__')) {
+    // Se a constante não estiver definida, encerre a execução
+    header('HTTP/1.0 403 Forbidden');
+    header("Location: ./index.php");
+    exit('Acesso proibido');
+}
+
 function sideBarAdm(){
 
     print '
@@ -19,6 +29,9 @@ function sideBarAdm(){
                 Menu
             </li>
             <li class="sidebar-item">
+                <a class="sidebar-link" href="home.php">
+                    <i class="align-middle me-2 fas fa-fw fa-home"></i> <span class="align-middle">Home</span>
+                </a>
                 <a class="sidebar-link" href="alunos.php">
                     <i class="align-middle me-2 fas fa-fw fa-users"></i> <span class="align-middle">Alunos</span>
                 </a>
@@ -27,6 +40,12 @@ function sideBarAdm(){
                 </a>
                 <a class="sidebar-link" href="GerarReciboManual.php">
                     <i class="align-middle me-2 fas fa-fw fa-money-check-alt"></i> <span class="align-middle">Gerar Recibo Manual</span>
+                </a>
+                <a class="sidebar-link" href="configuracoes.php">
+                    <i class="align-middle me-2 fas fa-fw fa-tools"></i> <span class="align-middle">Configurações</span>
+                </a>
+                <a class="sidebar-link" href="controladores/SairSessao.php">
+                    <i class="align-middle me-2 fas fa-fw fa-power-off"></i></i> <span class="align-middle">Sair</span>
                 </a>
             </li>
             </ul>
