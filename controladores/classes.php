@@ -5,7 +5,7 @@ if (!defined('__INCLUDED_BY_OTHER_FILE__')) {
     header('HTTP/1.0 403 Forbidden');
     header("Location: ./index.php");
     exit('Acesso proibido');
-}
+};
 
 include 'conexao.php';
 
@@ -123,7 +123,6 @@ function contaAlunos() {
 
     return $contagemAlunos;
 
-
 }
 
 // Função para selecionar no banco de dados os alunos ativos
@@ -142,7 +141,6 @@ function contaAlunosAtivos() {
     $contagemAlunosAtivos = $stmt->rowCount();
 
     return $contagemAlunosAtivos;
-
 
 }
 
@@ -163,7 +161,6 @@ function contaAlunosInativos() {
 
     return $contagemAlunosInativos;
 
-
 }
 
 function mensalidadesAtrasadas() {
@@ -182,7 +179,6 @@ function mensalidadesAtrasadas() {
     $contagemMensalidadeAtrasadas = $stmt->rowCount();
 
     return $contagemMensalidadeAtrasadas;
-
 
 }
 
@@ -207,6 +203,23 @@ function listaUltimosAlunos() {
 
     return $ultimosAlunos;
 
+}
+
+function cadastraNovoUsuario($conexao, $nome_usuario, $cpf_usuario, $senha_usuario, $tipo_usuario) {
+
+    $conexao = new Conexao();
+
+    $conn = $conexao->Conectar();
+
+    $query = "INSERT INTO usuarios (nome_usuario , cpf_usuario , senha_usuario, tipo_usuario) VALUES (:nome_usuario, :cpf_usuario, :senha_usuario, :tipo_usuario)";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bindValue(':nome_usuario', $nome_usuario);
+    $stmt->bindValue(':cpf_usuario', $cpf_usuario);
+    $stmt->bindValue(':senha_usuario', $senha_usuario);
+    $stmt->bindValue(':tipo_usuario', $tipo_usuario);
+
+    $stmt->execute();
 }
 
 
