@@ -3,7 +3,7 @@
 if (!defined('__INCLUDED_BY_OTHER_FILE__')) {
     // Se a constante não estiver definida, encerre a execução
     header('HTTP/1.0 403 Forbidden');
-    header("Location: ./index.php");
+    header("Location: ./index.php?acesso=proibido");
     exit('Acesso proibido');
 };
 
@@ -220,6 +220,63 @@ function cadastraNovoUsuario($conexao, $nome_usuario, $cpf_usuario, $senha_usuar
     $stmt->bindValue(':tipo_usuario', $tipo_usuario);
 
     $stmt->execute();
+}
+
+function listaUsuarios() {
+
+    $conexao = new Conexao();
+
+    $conn = $conexao->Conectar();
+
+    $query = "SELECT * FROM usuarios";
+
+    $stmt = $conn->prepare($query);
+
+    $stmt->execute();
+
+    while ($usuarios = $stmt->fetch(PDO::FETCH_ASSOC)) {
+
+        $listaUsuarios[] = $usuarios;
+
+    }
+
+    return $listaUsuarios;
+
+}
+
+function selecionaUsuario($conexao, $id) {
+
+
+    $conexao = new Conexao();
+    $conn = $conexao->Conectar();
+
+    $query = "SELECT * FROM usuarios WHERE id_usuario = :id_usuario";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(':id_usuario', $id);
+    $stmt->execute();
+
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+
+
+}
+
+function AtualizaDadosUsuario($conexao, $nome_uppercase, $cpf_usuario, $senha_hash, $tipo_usuario, $id_usuario){
+
+    $conexao = new Conexao();
+    $conn = $conexao->Conectar();
+
+    $query = "UPDATE usuarios SET nome_usuario = :nome_uppercase, cpf_usuario = :cpf_usuario, senha_usuario = :senha_hash, tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(":nome_usuario", $nome_uppercase);
+    $stmt->bindParam(":cpf_usuario", $cpf_usuario);
+    $stmt->bindParam(":senha_usuario", $senha_hash);
+    $stmt->bindParam(":tipo_usuario", $tipo_usuario);
+    $stmt->bindParam(":id_usuario", $id_usuario);
+
+    $stmt->execute();
+
 }
 
 

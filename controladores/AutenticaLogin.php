@@ -28,8 +28,8 @@ if (!empty($login) and !empty($senha)) {
 
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-       $login_salvo = $usuario['cpf_usuario'];
-       $senha_salva = $usuario['senha_usuario'];
+        $login_salvo = $usuario['cpf_usuario'];
+        $senha_salva = $usuario['senha_usuario'];
     
         if (password_verify($senha, $senha_salva)) {
 

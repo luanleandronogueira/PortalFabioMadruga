@@ -7,18 +7,13 @@
 	include 'controladores/classes.php';
 
 	// Verifica se há sessão aberta.
-	verificarSessao();
+	//verificarSessao();
 
-	$listaUsuarios = listaUsuarios();
+    $usuario = $_GET['id'];
 
-	
-	// foreach (){
+    $selecionaUsuario = selecionaUsuario($conexao, $usuario);
 
-		// echo '<pre>';
-		// 	print_r($listaUsuarios);
-		// echo '</pre>';	
-	
-	
+	// print_r($selecionaUsuario);
 ?>
 
 <!DOCTYPE html>
@@ -112,44 +107,31 @@
 						<div class="col-12">
 							<div class="card">
 								<div class="card-header">
-									<!-- Verificação de Autenticidade do Login -->
-									<?php if(isset($_GET['cadastro']) == 'sucesso') { 
-
-										$mensagem ='Atualizado com Sucesso'; ?>
-										<div class="alert alert-success alert-outline alert-dismissible" role="alert">
-											<div class="alert-icon">
-												<i class="far fa-fw fa-user"></i>
-											</div>
-											<div class="alert-message">
-												<h4><?php echo $mensagem ?></h4>
-											</div>
-
-											<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-										</div>
-
-										<?php } ?>
-									<h5 class="card-title">Listagem de Usuários </h5>
+									<h5 class="card-title">Alterar dados </h5>
 								</div>
+								 
 								<div class="card-body">
-									
-                                    <div class="col-lg-12 col-sm-12 col-md-12">
+									<form action="controladores/atualizaDadosUsuario.php" method="post">
+										<h5 class="card-title">Atualizar Dados</h5> 
 
-										<!-- Listagem dos usuários -->
-										<?php foreach ($listaUsuarios as $usuario) { ?>
-                                        <div class="alert alert-info alert-outline alert-dismissible" role="alert">
-                                          <div class="alert-icon">
-                                            <i class="far fa-fw fa-user"></i>
-                                          </div>
-                                          <div class="alert-message">
-                                            <!-- BEGIN primary modal -->
-                                            <?php echo $usuario['id_usuario'] . " - " . $usuario['nome_usuario'] ?> <div class="float-end">
-													<a href="AlterarDadosUsuarios.php?id=<?= $usuario['id_usuario']?>">Editar <i class="align-middle me-2 fas fa-fw fa-pen"></a></i>
-												</div>
+										<label for="">ID:</label>
+										<input type="text" required name="id_usuario" class="form-control" value="<?=$selecionaUsuario['id_usuario']?>" readonly>
+
+										<label for="">Nome Completo:</label>
+										<input class="form-control" type="text" value="<?=$selecionaUsuario['nome_usuario'] ?>" name="nome_usuario" required id="">
+
+										<label for="">CPF:</label>
+										<input class="form-control" id="cpf" value="<?=$selecionaUsuario['cpf_usuario'] ?>" name="cpf_usuario" type="text">
+
+										<label for=""><strong>Insira uma Nova Senha:</strong></label> 
+										<input class="form-control" required type="password" id="cpf" name="senha_usuario" type="password">
+										
+										<input type="hidden" required name="tipo_usuario" value="0"></br>
+										
+										<button type="submit" class="btn btn-warning">Atualizar</button></br></br>
 												
-                                          </div>
-										</div>
-										<?php } ?>
-                                    </div>
+									</form>
+                                </div>
                                     <hr>
 								</div>
 							</div>
