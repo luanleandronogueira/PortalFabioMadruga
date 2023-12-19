@@ -7,7 +7,7 @@
 	include 'controladores/classes.php';
 
 	// Verifica se há sessão aberta.
-	//verificarSessao();
+	verificarSessao();
 
     $usuario = $_GET['id'];
 
@@ -128,7 +128,8 @@
 										
 										<input type="hidden" required name="tipo_usuario" value="0"></br>
 										
-										<button type="submit" class="btn btn-warning">Atualizar</button></br></br>
+										<button type="submit" class="btn btn-warning">Atualizar</button>
+										<a class="btn btn-danger" href="controladores/ExcluirUsuario.php?id=<?=$selecionaUsuario['id_usuario']?>">Excluir Usuário</a></br></br>
 												
 									</form>
                                 </div>

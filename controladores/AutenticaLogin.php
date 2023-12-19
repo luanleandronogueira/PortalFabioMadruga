@@ -21,15 +21,13 @@ if (!empty($login) and !empty($senha)) {
    // $stmt->bindParam(':senha', $senha);
     $stmt->execute();
 
-    // echo '<pre>';
-    // var_dump($usuario);
-    // echo '</pre>';
+   
     if (empty($_POST['enviar_requisicao'])) {
 
         $usuario = $stmt->fetch(PDO::FETCH_ASSOC);
 
-        $login_salvo = $usuario['cpf_usuario'];
-        $senha_salva = $usuario['senha_usuario'];
+        echo $login_salvo = $usuario['cpf_usuario'];
+        echo $senha_salva = $usuario['senha_usuario'];
     
         if (password_verify($senha, $senha_salva)) {
 
@@ -42,6 +40,9 @@ if (!empty($login) and !empty($senha)) {
         } else {
     
             header('Location: ../index.php?erro=3');
+            //  echo '<pre>';
+            //     var_dump($usuario);
+            // echo '</pre>';
             exit();
         }
        

@@ -1,13 +1,13 @@
 <?php 
 
     //Permite o include de arquivos que não podem ser abertos no navegador
-	//define('__INCLUDED_BY_OTHER_FILE__', true);
+	define('__INCLUDED_BY_OTHER_FILE__', true);
 	include 'classes.php';
 
     if (!empty($_POST)) {
 
-        // Verifica se há sessão aberta.
-	    //verificarSessao();
+        //Verifica se há sessão aberta.
+	    verificarSessao();
         $usuario = $_POST;
 
         extract($usuario);

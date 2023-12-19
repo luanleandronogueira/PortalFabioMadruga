@@ -1,11 +1,21 @@
 <?php
-    include 'conexao.php';
+     //Permite o include de arquivos que não podem ser abertos no navegador
+    define('__INCLUDED_BY_OTHER_FILE__', true);
+    
+    // include 'conexao.php';
+    include 'classes.php';
     require "lib/vendor/autoload.php";
 
     // biblioteca PHPmailer
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\SMTP;
     use PHPMailer\PHPMailer\Exception;
+
+    // chama host para email dinamicamente
+    $id = '1';
+    $dados_host = ChamaEmailHost($conexao, $id);
+
+    extract($dados_host);
                 
     // define o horario local
     date_default_timezone_set('America/Sao_Paulo');
@@ -36,7 +46,6 @@
     //     print_r($_FILES);
     // echo '</pre>';
     // echo $_FILES['comprovante']['name'] . '</br>';
-
 
         if (!empty($_FILES) || !empty($_POST)) {
 
@@ -86,17 +95,17 @@
                         //Server settings
                         $mail->SMTPDebug = false;                      //Enable verbose debug output
                         $mail->isSMTP();                                            //Send using SMTP
-                        $mail->Host       = 'smtp.gmail.com';                     //Set the SMTP server to send through
+                        $mail->Host       = $Host;                     //Set the SMTP server to send through
                         $mail->SMTPAuth   = true;                                   //Enable SMTP authentication
-                        $mail->Username   = 'garanhunscaruaruhbpay@gmail.com';                     //SMTP username
-                        $mail->Password   = 'cctgqatddqgclbau';                               //SMTP password
-                        $mail->SMTPSecure = 'tls';            //Enable implicit TLS encryption
-                        $mail->Port       = 587;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
+                        $mail->Username   = $Username;                     //SMTP username
+                        $mail->Password   = $SenhaPassword;                               //SMTP password
+                        $mail->SMTPSecure = $SMTPSecure;            //Enable implicit TLS encryption
+                        $mail->Port       = $Port;                                    //TCP port to connect to; use 587 if you have set `SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS`
                         $mail->CharSet = 'UTF-8';
                     
                         //Recipients
-                        $mail->setFrom('garanhunscaruaruhbpay@gmail.com', 'naoresponda');
-                        $mail->addAddress('luannogueira093@gmail.com');     //Add a recipient
+                        $mail->setFrom($SetFromEmail, $SetFromTitulo);
+                        $mail->addAddress($SetAddAddress);     //Add a recipient
                         //$mail->addAddress('ellen@example.com');               //Name is optional
                         //$mail->addReplyTo('info@example.com', 'Information');
                         //$mail->addCC('cc@example.com');

@@ -261,19 +261,56 @@ function selecionaUsuario($conexao, $id) {
 
 }
 
-function AtualizaDadosUsuario($conexao, $nome_uppercase, $cpf_usuario, $senha_hash, $tipo_usuario, $id_usuario){
+function AtualizaDadosUsuario($conexao, $nome_usuario, $cpf_usuario, $senha_usuario, $tipo_usuario, $id_usuario){
 
     $conexao = new Conexao();
     $conn = $conexao->Conectar();
 
-    $query = "UPDATE usuarios SET nome_usuario = :nome_uppercase, cpf_usuario = :cpf_usuario, senha_usuario = :senha_hash, tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario";
+    $query = "UPDATE usuarios SET nome_usuario = :nome_usuario, cpf_usuario = :cpf_usuario, senha_usuario = :senha_usuario, tipo_usuario = :tipo_usuario WHERE id_usuario = :id_usuario";
 
     $stmt = $conn->prepare($query);
-    $stmt->bindParam(":nome_usuario", $nome_uppercase);
+    $stmt->bindParam(":nome_usuario", $nome_usuario);
     $stmt->bindParam(":cpf_usuario", $cpf_usuario);
-    $stmt->bindParam(":senha_usuario", $senha_hash);
+    $stmt->bindParam(":senha_usuario", $senha_usuario);
     $stmt->bindParam(":tipo_usuario", $tipo_usuario);
     $stmt->bindParam(":id_usuario", $id_usuario);
+
+    $stmt->execute();
+
+}
+
+function ChamaEmailHost($conexao, $id){
+
+    $conexao = new Conexao();
+    $conn = $conexao->Conectar();
+
+    $query = "SELECT * FROM email_host WHERE id = :id";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(":id", $id);
+
+    $stmt->execute();
+
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
+
+function AtualizaEmailHost($conexao, $Host, $Username, $SenhaPassword, $SMTPSecure, $Port, $SetFromEmail, $SetFromTitulo, $SetAddAddress, $id) {
+
+    $conexao = new Conexao();
+    $conn = $conexao->Conectar();
+
+    $query = "UPDATE email_host SET Host = :Host, Username = :Username, SenhaPassword = :SenhaPassword, SMTPSecure = :SMTPSecure, Port = :Port, SetFromEmail = :SetFromEmail, SetFromTitulo = :SetFromTitulo, SetAddAddress = :SetAddAddress WHERE id = :id";
+    
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(":Host", $Host);
+    $stmt->bindParam(":Username", $Username);
+    $stmt->bindParam(":SenhaPassword", $SenhaPassword);
+    $stmt->bindParam(":SMTPSecure", $SMTPSecure);
+    $stmt->bindParam(":Port", $Port);
+    $stmt->bindParam(":SetFromEmail", $SetFromEmail);
+    $stmt->bindParam(":SetFromTitulo", $SetFromTitulo);
+    $stmt->bindParam(":SetAddAddress", $SetAddAddress);
+    $stmt->bindParam(":id", $id);
 
     $stmt->execute();
 

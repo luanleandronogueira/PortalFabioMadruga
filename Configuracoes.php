@@ -147,6 +147,21 @@
 
                                 <?php } ?>
 
+								<?php if(isset($_GET['host']) == 'Atualizado') { ?>
+                                                
+                                                <div class="alert alert-success alert-outline alert-dismissible" role="alert">
+                                                    <div class="alert-icon">
+														<i class="align-middle me-2 fas fa-fw fa-check-circle"></i>
+                                                    </div>
+                                                    <div class="alert-message">
+                                                        <h4>Configurações do Host Atualizados com Sucesso</h4>
+                                                    </div>
+
+												<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+											</div>
+
+                                <?php } ?>
+
                                 <?php if(isset($_GET['erro']) == 'Erro_Senha') { ?>
                                                 
                                                 <div class="alert alert-warning alert-outline alert-dismissible" role="alert">
@@ -183,7 +198,7 @@
                                     <hr>
 
                                     <div class="col-lg-4 col-sm-12 col-md-4">
-                                      <form action="" method="post">
+                                      <form action="controladores/AtualizaHost.php" method="post">
                                         <h5 class="card-title">Configurações de Envio de E-mail</h5>
                                             <label for="">Host</label>
                                             <input class="form-control" required type="text" name="host" id="">
@@ -192,7 +207,7 @@
                                             <input class="form-control" required type="text" name="username" id="">
 
                                             <label for="">Password:</label>
-                                            <input class="form-control" required type="text" name="password" id="">
+                                            <input class="form-control" required type="text" name="senhapassword" id="">
 
                                             <label for="">SMTPSecure</label>
                                             <input class="form-control" required type="text" name="smtpsecure" id="">
