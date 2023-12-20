@@ -314,6 +314,20 @@ function AtualizaEmailHost($conexao, $Host, $Username, $SenhaPassword, $SMTPSecu
 
     $stmt->execute();
 
+} 
+
+function DeletaUsuario($conexao, $id_usuario) {
+
+    $conexao = new Conexao();
+    $conn = $conexao->Conectar();
+
+    $query = "DELETE FROM usuarios WHERE id_usuario = :id_usuario";
+
+    $stmt = $conn->prepare($query);
+    $stmt->bindParam(":id_usuario", $id_usuario);
+
+    $stmt->execute();
+
 }
 
 

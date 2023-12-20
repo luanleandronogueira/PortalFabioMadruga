@@ -128,6 +128,23 @@
 										</div>
 
 										<?php } ?>
+
+										<!-- Verificação de Autenticidade do Login -->
+									<?php if(isset($_GET['deletadoUsuario']) == 'sucesso') { 
+
+									$mensagem ='Usuário Deletado com Sucesso'; ?>
+									<div class="alert alert-success alert-outline alert-dismissible" role="alert">
+										<div class="alert-icon">
+											<i class="far fa-fw fa-user"></i>
+										</div>
+										<div class="alert-message">
+											<h4><?php echo $mensagem ?></h4>
+										</div>
+
+										<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+									</div>
+
+									<?php } ?>
 									<h5 class="card-title">Listagem de Usuários </h5>
 								</div>
 								<div class="card-body">
