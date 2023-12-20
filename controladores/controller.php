@@ -32,7 +32,7 @@ function sideBarAdm(){
                 <a class="sidebar-link" href="home.php">
                     <i class="align-middle me-2 fas fa-fw fa-home"></i> <span class="align-middle">Home</span>
                 </a>
-                <a class="sidebar-link" href="alunos.php">
+                <a class="sidebar-link" href="Alunos.php">
                     <i class="align-middle me-2 fas fa-fw fa-users"></i> <span class="align-middle">Alunos</span>
                 </a>
                 <a class="sidebar-link" href="mensalidades.php">
@@ -41,7 +41,7 @@ function sideBarAdm(){
                 <a class="sidebar-link" href="GerarReciboManual.php">
                     <i class="align-middle me-2 fas fa-fw fa-money-check-alt"></i> <span class="align-middle">Gerar Recibo Manual</span>
                 </a>
-                <a class="sidebar-link" href="configuracoes.php">
+                <a class="sidebar-link" href="Configuracoes.php">
                     <i class="align-middle me-2 fas fa-fw fa-tools"></i> <span class="align-middle">Configurações</span>
                 </a>
                 <a class="sidebar-link" href="controladores/SairSessao.php">

@@ -193,7 +193,7 @@
                                             <div class="row">
                                                 <center><h4>Recibo de Pagamento</h4></center>
 
-                                                <form action="controladores/GerarPDFManual.php" method="$_GET">
+                                                <form action="controladores/GerarPDFManual.php" method="get">
 
                                                     <p>Declaro que recebi do aluno(a): 
                                                         <select name="aluno" id="">
